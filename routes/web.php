@@ -23,5 +23,7 @@ Route::get('/', function () {
 });
 Route::resource('posts', PostController::class);
 Route::resource('provinces', ProvinceController::class);
+Route::resource('provinceid', ProvinceController::class);
 Route::resource('districts', DistrictController::class);
 Route::resource('employees', EmployeeController::class);
+Route::get('provinceid/{id}/find',[ProvinceController::class,'getProvince']);

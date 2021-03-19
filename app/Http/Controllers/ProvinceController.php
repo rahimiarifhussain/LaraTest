@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Province;
+use App\Models\District;
 use Illuminate\Http\Request;
 
 class ProvinceController extends Controller
@@ -58,7 +59,24 @@ class ProvinceController extends Controller
      */
     public function edit(Province $province)
     {
-        //
+        // $data = Province::find(2)->districts;
+        // dd($data);
+        // $dist = District::find($data)->districts;
+        // dd($dist);
+        // return response()->json([$data]);
+    }
+
+    public function getprovince($province)
+    {
+        
+        $data = Province::find($province)->districts;
+        if(count($data)>0) {
+            return response()->json($data);
+        } else {
+            return response()->json(["null"=>"Sorry empey"]);
+        }
+      
+       
     }
 
     /**

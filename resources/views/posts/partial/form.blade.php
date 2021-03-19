@@ -1,7 +1,7 @@
 @csrf
 <div class="form-group">
     <label for="title">title</label>
-    <input id="title" class="form-control" type="text" name="title">
+    <input id="title" class="form-control" type="text" name="title" value="@isset($posts) {{$post->id}} @endisset">
 </div>
 <div class="form-group">
     <label for="description">Description</label>
