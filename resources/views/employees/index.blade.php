@@ -6,8 +6,8 @@
         </div>
         <div class="row">
         <div class="col-md-2"></div>
-        <div class="col-md-10">
-            <table class="table table-light">
+        <div class="col-md-10" id="printJS-form">
+            <table class="table table-light" >
                 <tr>
                     <th>ID</th>
                     <th>Name</th>
@@ -24,7 +24,12 @@
                 </tbody>
             </table>
         </div>
-        <div class="col-md-2"></div>
+        <div class="col-md-2">
+            
+ <button type="button" onclick="printJS('printJS-form', 'html')">
+    Print Form
+ </button>
+        </div>
     </div>
             </div>
 
